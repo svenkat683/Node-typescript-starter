@@ -1,13 +1,11 @@
-import mongo, { Mongoose } from "mongoose";
+import mongo from "mongoose";
 import dotenv from "dotenv";
 
 
 if (process.env.NODE_ENV !== "production") {
-    dotenv.config({path: ".env"});
+    dotenv.config();
 }
-
-
-const dbUrl = process.env.MONGO_URL;
+const dbUrl = process.env.MONGODB_LOCAL_URL;
 
 function mongoConnect () {
     console.log(dbUrl);
