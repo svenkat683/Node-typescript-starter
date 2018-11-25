@@ -1,14 +1,8 @@
 import mongo from "mongoose";
-import dotenv from "dotenv";
+import { MONGODB_URL } from "../utils/secrets";
 
-
-if (process.env.NODE_ENV !== "production") {
-    dotenv.config();
-}
-const dbUrl = process.env.MONGODB_LOCAL_URL;
-
+const dbUrl = MONGODB_URL;
 function mongoConnect () {
-    console.log(dbUrl);
     mongo.connect(dbUrl, { useNewUrlParser: true } ).then(() => {
         console.log("database connected successfully.");
     }).catch( err => console.error(err));
