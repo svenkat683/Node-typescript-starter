@@ -8,4 +8,4 @@ The starter template for nodeJS + Typescript application
   3. Run ```npm install```
   4. Finally run ```npm start```
   
-Easy right :simple_smile: Happy Coding
+Easy right :blush:. Happy Coding :computer:
