@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import morgan from "morgan";
 import path from "path";
 import compression from "compression";
+import { ENVIRONMENT } from "../utils/secrets";
 
 import mongoConnect from "../config/dbConnection";
 import { router } from "../routes";
@@ -12,10 +13,12 @@ import { router } from "../routes";
 mongoConnect();
 
 const app = express();
-app.set("port", 3000 || process.env.PORT);
 
+if (ENVIRONMENT !== "production") {
+  app.set("port", 3000 || process.env.PORT);
+  app.use(morgan("dev"));
+}
 // setting up middlewares
-app.use(morgan("dev"));
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -24,4 +27,4 @@ app.use(router);
 app.use(compression());
 
 
-export default app;
+export = app;
