@@ -12,7 +12,7 @@ Additionally it has AWS lambda setup.
 
 ## Deploy to AWS Lambda
 
-###Prerequisites
+### Prerequisites
 
   Here we using claudiajs to setup the lamdba function
   * Install and configure claudiajs. [Reference](https://claudiajs.com/tutorials/installing.html)
