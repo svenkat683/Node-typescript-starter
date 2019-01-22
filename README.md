@@ -1,6 +1,6 @@
 # Node-typescript-Mongodb-starter
 
-This is a starter template for nodeJS + Typescript + Mongodb application.
+This is a starter template for NodeJS + Typescript + Mongodb application.
 Additionally it has AWS lambda setup.
 
 ## Run below commands in terminal one by one to start the app.

@@ -18,7 +18,7 @@
     "prepateToDeployLambda": "npm run copy-lambda-assets && npm run lambda-proxy-wrapper",
     "lambda-proxy-wrapper": "cd dist && claudia generate-serverless-express-proxy --express-module server",
     "create-lambda-func": "cd dist && claudia create --handler lambda.handler --deploy-proxy-api --region us-east-1 --set-env-from-json lambda.env.json",
-    "update-lambda": "cd dist && claudia update --set-env-from-json lambda.env.json"
+    "update-lambda": "npm run prepateToDeployLambda && cd dist && claudia update --set-env-from-json lambda.env.json"
   },
   "repository": {
     "type": "git",
